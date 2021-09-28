@@ -1,0 +1,12 @@
+Webpack (imports/exports)
+  Babel
+  Scss
+  Eslint
+  2 Mods
+    - Dev
+    Dev Srver, SourcMaps, Eslint, Not Minifiend JS & CSS
+    - Prod
+    Minifiend Code
+Git
+  Production
+  Development
