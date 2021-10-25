@@ -1,5 +1,32 @@
-$dark: #fff;
+//импорт normalize
+@import '~normalize.css';
+//шрифты
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,900;1,500&display=swap');
+
+@import './variables';
+@import './mixins';
+
+@import './header.scss';
+@import './toolbar.scss';
+@import './formula.scss';
+@import './table.scss';
+@import './dashboard.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  background: $dark;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.excel {
+  position: relative;
+  color: #888;
+  height: 100%;
+  max-width: 100%;
+  font-size: 0.8rem;
 }

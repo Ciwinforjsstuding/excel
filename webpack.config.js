@@ -6,8 +6,10 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = (env, argv) => {
   const isProd = argv.mode === 'production';
-  const filename = (ext) =>
-    isProd ? `[name].[contenthash].bundle.${ext}` : `[name].bundle.${ext}`;
+  const filename = ext =>
+    isProd
+      ? `[name].[contenthash].bundle.${ext}`
+      : `[name].bundle.${ext}`;
   const plugins = () => {
     const base = [
       new HtmlwebpackPlugin({
@@ -58,7 +60,11 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.s[ac]ss$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader',
+          ],
         },
         {
           test: /\.m?js$/,
